@@ -2,8 +2,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-import Home, { loader as eventLoader } from "./pages/Home";
-import Allevents from "./pages/Allevents";
+import Home from "./pages/Home";
+
+import Allevents, { loader as eventLoader } from "./pages/Allevents";
 import Profile from "./pages/Profile";
 
 const router = createBrowserRouter([
@@ -13,7 +14,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: eventLoader,
       },
       {
         path: "/login",
@@ -26,6 +26,7 @@ const router = createBrowserRouter([
       {
         path: "/events",
         element: <Allevents />,
+        loader: eventLoader,
       },
       {
         path: "/Profile",

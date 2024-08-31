@@ -27,7 +27,14 @@ function Event({ event, id }) {
       onClick={handleSelectedMovie}
     >
       <div className="relative h-56   overflow-hidden shadow-lg bg-clip-border rounded-t-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-        <img src={`https://picsum.photos/id/${id}/400/300`} alt="card-image" />
+        <img
+          src={
+            id
+              ? `https://picsum.photos/id/${id}/400/300}`
+              : "https://fastly.picsum.photos/id/705/400/400.jpg?hmac=17aJjeY4iQGsEpmQ0iUeYIm0SwDsotXmOtI2MH2g4LQ"
+          }
+          alt="card-image"
+        />
       </div>
       <div className="px-6 py-2">
         <h5 className="block mb-2 font-sans text-base antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">

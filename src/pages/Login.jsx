@@ -39,7 +39,7 @@ function Login() {
           <h1 className="uppercase font-semibold   bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-2xl mb-5">
             log into your account
           </h1>
-          <ul className="flex flex-col gap-6 text-lg text-stone-500">
+          <ul className="flex flex-col gap-6 text-base text-stone-500">
             <li className="flex flex-col gap-2">
               <label htmlFor="email">Email</label>
               <input

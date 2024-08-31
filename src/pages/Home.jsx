@@ -5,10 +5,6 @@ import { useLoaderData } from "react-router-dom";
 import { setEvents } from "../componets/eventsSlice";
 import { useDispatch } from "react-redux";
 function Home() {
-  const events = useLoaderData();
-  const dispatch = useDispatch();
-  dispatch(setEvents(events));
-
   return (
     <div className="home-page w-full h-full  bg-center bg-cover place-content-center">
       <section className="text-center flex flex-col gap-5">
@@ -31,11 +27,6 @@ function Home() {
       </section>
     </div>
   );
-}
-
-export async function loader() {
-  const events = await getAllEvents();
-  return events;
 }
 
 export default Home;

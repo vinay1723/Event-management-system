@@ -113,3 +113,6 @@ export async function updateSettings(user, data) {
     console.log(error);
   }
 }
+
+// http://localhost:3000/
+// "https://ems-xb6r.onrender.com

@@ -5,6 +5,7 @@ const initialState = {
   action: undefined,
   selectedEvent: null,
   events: [],
+  userevents: [],
 };
 
 const eventSlice = createSlice({
@@ -12,10 +13,10 @@ const eventSlice = createSlice({
   initialState,
   reducers: {
     getevents(state, action) {
-      state.events = action.payload;
+      state.userevents = action.payload;
     },
     updateEvent(state, action) {
-      state.events = state.events.map((event) =>
+      state.userevents = state.userevents.map((event) =>
         event._id === action.payload._id
           ? { ...event, ...action.payload }
           : event
@@ -32,10 +33,10 @@ const eventSlice = createSlice({
       state.events = action.payload;
     },
     createEvent(state, action) {
-      state.events = [...state.events, action.payload];
+      state.userevents = [...state.userevents, action.payload];
     },
     deleteEvent(state, action) {
-      state.events = state.events.filter(
+      state.userevents = state.userevents.filter(
         (event) => event._id != action.payload._id
       );
     },
@@ -46,7 +47,7 @@ export const { setAction, setEvent, setEvents } = eventSlice.actions;
 
 export default eventSlice.reducer;
 
-export const getEvents = (state) => state.events.events;
+export const getEvents = (state) => state.events.userevents;
 export function getevents(id) {
   return async function (dispatch, getState) {
     try {
