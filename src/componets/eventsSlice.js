@@ -52,7 +52,7 @@ export function getevents(id) {
     try {
       const res = await axios({
         method: "GET",
-        url: `http://localhost:3000/api/v1/userevent/${id}`,
+        url: `https://ems-xb6r.onrender.com/api/v1/userevent/${id}`,
         withCredentials: true,
       });
       const data = res.data.data;
@@ -68,7 +68,7 @@ export function createEvent(event) {
     try {
       const res = await axios({
         method: "POST",
-        url: `http://localhost:3000/api/v1/userevent/${event.user}`,
+        url: `https://ems-xb6r.onrender.com/api/v1/userevent/${event.user}`,
         data: event,
         withCredentials: true,
       });
@@ -84,7 +84,7 @@ export function updateEvent(event) {
     try {
       const res = await axios({
         method: "PATCH",
-        url: `http://localhost:3000/api/v1/userevent/${event.user}`,
+        url: `https://ems-xb6r.onrender.com/api/v1/userevent/${event.user}`,
         data: event,
         withCredentials: true,
       });
@@ -102,7 +102,7 @@ export function deleteEvent(event) {
     try {
       const res = await axios({
         method: "DELETE",
-        url: `http://localhost:3000/api/v1/userevent/${event.user._id}`,
+        url: `https://ems-xb6r.onrender.com/api/v1/userevent/${event.user._id}`,
         data: event,
         withCredentials: true,
       });
