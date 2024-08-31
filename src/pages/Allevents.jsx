@@ -16,6 +16,7 @@ function Allevents() {
       <div className="w-full bg-slate-100">
         <div className="bg-slate-600 mt-5 h-[60px] mx-4 rounded-xl flex gap-5 justify-between px-5  items-center">
           <div>
+            <label className="text-slate-100">Search events</label>
             <input
               type="text"
               id="search"
