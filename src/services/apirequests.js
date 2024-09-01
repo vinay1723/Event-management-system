@@ -4,7 +4,7 @@ export async function signup(user) {
   try {
     const res = await axios({
       method: "POST",
-      url: "https://vinays-ems.netlify.app/api/v1/user/signup",
+      url: "https://ems-xb6r.onrender.com/api/v1/user/signup",
       data: user,
       withCredentials: true,
     });
@@ -17,7 +17,7 @@ export async function login(user) {
   try {
     const res = await axios({
       method: "POST",
-      url: "https://vinays-ems.netlify.app/api/v1/user/login",
+      url: "https://ems-xb6r.onrender.com/api/v1/user/login",
       data: user,
       withCredentials: true,
     });
@@ -31,7 +31,7 @@ export async function logout() {
   try {
     const res = await axios({
       method: "GET",
-      url: "https://vinays-ems.netlify.app/api/v1/user/logout",
+      url: "https://ems-xb6r.onrender.com/api/v1/user/logout",
       withCredentials: true,
     });
 
@@ -45,7 +45,7 @@ export async function getAllEvents() {
   try {
     const res = await axios({
       method: "GET",
-      url: `https://vinays-ems.netlify.app/api/v1/userevent/events`,
+      url: `https://ems-xb6r.onrender.com/api/v1/userevent/events`,
       withCredentials: true,
     });
 
@@ -59,7 +59,7 @@ export async function createEvent(event) {
   try {
     const res = await axios({
       method: "POST",
-      url: `https://vinays-ems.netlify.app/api/v1/userevent/${event.user}`,
+      url: `https://ems-xb6r.onrender.com/api/v1/userevent/${event.user}`,
       data: event,
       withCredentials: true,
     });
@@ -74,7 +74,7 @@ export async function updateEvent(event) {
   try {
     const res = await axios({
       method: "PATCH",
-      url: `https://vinays-ems.netlify.app/api/v1/userevent/${event.user}`,
+      url: `https://ems-xb6r.onrender.com/api/v1/userevent/${event.user}`,
       data: event,
       withCredentials: true,
     });
@@ -89,7 +89,7 @@ export async function deleteEvent(event) {
   try {
     const res = await axios({
       method: "DELETE",
-      url: `https://vinays-ems.netlify.app/api/v1/userevent/${event.user._id}`,
+      url: `https://ems-xb6r.onrender.com/api/v1/userevent/${event.user._id}`,
       data: event,
       withCredentials: true,
     });
@@ -104,7 +104,7 @@ export async function updateSettings(user, data) {
   try {
     const res = await axios({
       method: "PATCH",
-      url: `https://vinays-ems.netlify.app/api/v1/user/updateMyPassword`,
+      url: `https://ems-xb6r.onrender.com/api/v1/user/updateMyPassword`,
       data: user,
       withCredentials: true,
     });
