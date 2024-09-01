@@ -53,7 +53,7 @@ export function getevents(id) {
     try {
       const res = await axios({
         method: "GET",
-        url: `https://ems-xb6r.onrender.com/api/v1/userevent/${id}`,
+        url: `https://vinays-ems.netlify.app/api/v1/userevent/${id}`,
         withCredentials: true,
       });
       const data = res.data.data;
@@ -69,7 +69,7 @@ export function createEvent(event) {
     try {
       const res = await axios({
         method: "POST",
-        url: `https://ems-xb6r.onrender.com/api/v1/userevent/${event.user}`,
+        url: `https://vinays-ems.netlify.app/api/v1/userevent/${event.user}`,
         data: event,
         withCredentials: true,
       });
@@ -85,7 +85,7 @@ export function updateEvent(event) {
     try {
       const res = await axios({
         method: "PATCH",
-        url: `https://ems-xb6r.onrender.com/api/v1/userevent/${event.user}`,
+        url: `https://vinays-ems.netlify.app/api/v1/userevent/${event.user}`,
         data: event,
         withCredentials: true,
       });
@@ -103,7 +103,7 @@ export function deleteEvent(event) {
     try {
       const res = await axios({
         method: "DELETE",
-        url: `https://ems-xb6r.onrender.com/api/v1/userevent/${event.user._id}`,
+        url: `https://vinays-ems.netlify.app/api/v1/userevent/${event.user._id}`,
         data: event,
         withCredentials: true,
       });
